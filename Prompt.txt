@@ -1,0 +1,74 @@
+Quiero que generes un proyecto completo de una plataforma web para la gestión de reservas en cursos o talleres, siguiendo estos puntos clave. Organízalo todo en un solo archivo estructurado con secciones bien definidas, comentarios claros y explicaciones didácticas, en español técnico pero amigable.
+
+1. Inicialización y Estructura del Proyecto
+Usa Docker para contenerizar backend y frontend.
+
+Backend con Node.js + Express.
+
+Base de datos MongoDB (también en un contenedor).
+
+Frontend con React.
+
+Incluye Dockerfile para backend y frontend, y un archivo docker-compose.yml.
+
+Explica cada archivo y cómo levantar el sistema.
+
+2. Backend: API RESTful con Node.js y MongoDB
+Modelo User con campos: nombre, correo (único), contraseña (hashed), rol (usuario/admin).
+
+Modelo Course con campos: título, descripción, cupo máximo, fechas (inicio y fin).
+
+Modelo Reservation: usuario, curso, fecha de reserva, estado (confirmada, cancelada).
+
+Implementa autenticación JWT.
+
+CRUD para cursos (solo admin puede crear, actualizar y borrar).
+
+Endpoints para que usuarios se inscriban en cursos (crear reservas).
+
+Validaciones para no exceder cupo ni permitir reservas fuera del periodo.
+
+Manejo de errores y respuestas estándar JSON.
+
+Documentación Swagger/OpenAPI.
+
+3. Frontend: React SPA
+Registro, login y autenticación con JWT.
+
+Dashboard para usuarios:
+
+Listar cursos disponibles y estado de su inscripción.
+
+Crear y cancelar reservas.
+
+Panel admin para gestionar cursos (crear, editar, eliminar).
+
+Diseño responsivo y limpio, usa Bootstrap o Material UI.
+
+Manejo de errores y notificaciones amigables.
+
+4. Seguridad y Buenas Prácticas
+Protege rutas con middleware de autenticación y autorización.
+
+Sanitiza entradas y valida datos.
+
+Usa variables de entorno para configuraciones sensibles.
+
+Incluye scripts para inicializar base de datos si es necesario.
+
+5. CI/CD (opcional pero recomendado)
+Ejemplo simple de workflow de GitHub Actions para tests y build.
+
+6. Guía de Uso y Despliegue
+Cómo construir e iniciar con docker-compose.
+
+Crear admin inicial desde línea de comandos.
+
+Flujo típico: registro, login, reserva, gestión de cursos.
+
+Cómo probar API con Postman o curl.
+
+7. Comentarios y FAQ
+Comentarios naturales en todo el código, explicando cada paso de manera clara, humana y profesional.
+
+Sección FAQ con posibles errores comunes y soluciones.
