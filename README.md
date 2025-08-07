@@ -1,155 +1,143 @@
 # Sistema de Reservas Web para Cursos
 
-Una plataforma web completa para la gestión de reservas en cursos y talleres, desarrollada con Node.js, React, MongoDB y Docker.
+Un sistema web completo desarrollado para la gestión de reservas de cursos, con una arquitectura moderna que combina un backend robusto con una interfaz de usuario intuitiva y responsive.
 
-## 🚀 Características Principales
+## 🚀 Sobre el Proyecto
 
-- **Backend**: API RESTful con Node.js + Express + MongoDB
-- **Frontend**: SPA React con diseño responsivo
-- **Autenticación**: JWT para usuarios y administradores
-- **Contenedores**: Docker para desarrollo y despliegue
-- **Base de Datos**: MongoDB con modelos optimizados
-- **Seguridad**: Validaciones, sanitización y middleware de protección
+Este proyecto nació de la necesidad de crear una solución integral para instituciones educativas que necesitan gestionar sus cursos y reservas de manera eficiente. Desarrollé este sistema desde cero, enfocándome en crear una experiencia de usuario excepcional mientras mantengo un código limpio y escalable.
 
-## 📋 Requisitos Previos
+### Lo que aprendí y desarrollé:
 
-- Docker y Docker Compose
-- Node.js 18+ (para desarrollo local)
-- Git
+- **Arquitectura Full-Stack**: Implementé una separación clara entre frontend y backend, permitiendo escalabilidad y mantenimiento eficiente
+- **Autenticación Segura**: Desarrollé un sistema de autenticación con JWT que maneja diferentes roles de usuario
+- **Panel de Administración**: Creé una interfaz completa para que los administradores puedan gestionar cursos y reservas
+- **API RESTful**: Diseñé una API robusta que sigue las mejores prácticas de desarrollo web
+- **Interfaz Responsive**: Desarrollé una UI moderna que funciona perfectamente en dispositivos móviles y desktop
 
-## 🛠️ Instalación y Configuración
+## 🛠️ Tecnologías Utilizadas
 
-### 1. Clonar el Repositorio
-```bash
-git clone <url-del-repositorio>
-cd sistema-reservas-cursos
-```
+### Backend
+- **Node.js** - Runtime de JavaScript del lado del servidor
+- **Express.js** - Framework web para crear APIs RESTful
+- **MongoDB** - Base de datos NoSQL para flexibilidad en el esquema
+- **JWT** - Autenticación segura con tokens
+- **Mongoose** - ODM para MongoDB
 
-### 2. Configurar Variables de Entorno
-```bash
-# Copiar archivos de ejemplo
-cp backend/.env.example backend/.env
-cp frontend/.env.example frontend/.env
-```
+### Frontend
+- **React** - Biblioteca para construir interfaces de usuario
+- **JavaScript ES6+** - Características modernas de JavaScript
+- **CSS3** - Estilos modernos y responsive
+- **Context API** - Gestión de estado global
 
-### 3. Levantar con Docker Compose
-```bash
-docker-compose up -d
-```
+### DevOps
+- **Docker** - Containerización para desarrollo y despliegue
+- **Docker Compose** - Orquestación de servicios
 
-### 4. Crear Usuario Administrador Inicial
-```bash
-docker-compose exec backend npm run create-admin
-```
+## 📋 Funcionalidades Principales
+
+### Para Usuarios
+- Registro e inicio de sesión con validaciones
+- Exploración de cursos disponibles
+- Sistema de reservas con confirmaciones
+- Perfil personal con historial de reservas
+- Interfaz intuitiva y responsive
+
+### Para Administradores
+- Panel de administración completo
+- Gestión de cursos (crear, editar, eliminar)
+- Visualización de todas las reservas
+- Gestión de usuarios del sistema
+- Dashboard con estadísticas
 
 ## 🏗️ Estructura del Proyecto
 
 ```
-sistema-reservas-cursos/
-├── backend/                 # API RESTful con Node.js
-├── frontend/               # Aplicación React
-├── docker-compose.yml      # Configuración de contenedores
-├── .github/               # Workflows de CI/CD
-└── docs/                  # Documentación adicional
+├── backend/                 # API REST con Node.js/Express
+│   ├── models/             # Modelos de MongoDB
+│   ├── routes/             # Rutas de la API
+│   ├── middleware/         # Middleware personalizado
+│   └── scripts/           # Scripts de utilidad
+├── frontend/              # Aplicación React
+│   ├── src/
+│   │   ├── components/    # Componentes reutilizables
+│   │   ├── contexts/      # Context API para estado
+│   │   └── services/      # Servicios de API
+└── docker-compose.yml     # Configuración de Docker
 ```
 
-## 🔧 Desarrollo Local
+## 🚀 Instalación y Uso
 
-### Backend
+### Prerrequisitos
+- Node.js (v14 o superior)
+- MongoDB
+- Docker (opcional)
+
+### Instalación Local
+
+1. **Clonar el repositorio**
+```bash
+git clone https://github.com/BrianDevCo/Sistema-Reservas-Cursos.git
+cd Sistema-Reservas-Cursos
+```
+
+2. **Configurar el backend**
 ```bash
 cd backend
 npm install
-npm run dev
-```
-
-### Frontend
-```bash
-cd frontend
-npm install
+cp env.example .env
+# Editar .env con tus configuraciones
 npm start
 ```
 
-## 📚 API Documentation
-
-La documentación de la API está disponible en:
-- **Swagger UI**: http://localhost:3001/api-docs
-- **OpenAPI JSON**: http://localhost:3001/api-docs.json
-
-## 🧪 Testing
-
+3. **Configurar el frontend**
 ```bash
-# Backend tests
-docker-compose exec backend npm test
-
-# Frontend tests
-docker-compose exec frontend npm test
+cd ../frontend
+npm install
+cp env.example .env
+# Editar .env con la URL del backend
+npm start
 ```
 
-## 🚀 Despliegue
+### Con Docker (Recomendado)
 
-### Producción
 ```bash
-docker-compose -f docker-compose.prod.yml up -d
+docker-compose up --build
 ```
 
-### Desarrollo
-```bash
-docker-compose up -d
+## 🔧 Configuración
+
+### Variables de Entorno
+
+**Backend (.env)**
+```
+PORT=5000
+MONGODB_URI=mongodb://localhost:27017/reservas-cursos
+JWT_SECRET=tu_jwt_secret_aqui
 ```
 
-## 📖 Guía de Uso
+**Frontend (.env)**
+```
+REACT_APP_API_URL=http://localhost:5000/api
+```
 
-### Flujo Típico de Usuario
+## 📸 Capturas de Pantalla
 
-1. **Registro**: Crear cuenta en la plataforma
-2. **Login**: Iniciar sesión con credenciales
-3. **Explorar Cursos**: Ver cursos disponibles
-4. **Reservar**: Inscribirse en cursos de interés
-5. **Gestionar**: Ver y cancelar reservas propias
+*[Aquí puedes agregar capturas de pantalla de tu aplicación]*
 
-### Flujo de Administrador
+## 🤝 Contribuciones
 
-1. **Login Admin**: Acceder con credenciales de administrador
-2. **Gestionar Cursos**: Crear, editar y eliminar cursos
-3. **Ver Reservas**: Monitorear todas las reservas del sistema
-4. **Gestión de Usuarios**: Administrar usuarios del sistema
+Este proyecto fue desarrollado como parte de mi portafolio personal. Si tienes sugerencias o encuentras algún bug, no dudes en contactarme.
 
-## 🔒 Seguridad
+## 📞 Contacto
 
-- Autenticación JWT
-- Validación de datos de entrada
-- Sanitización de inputs
-- Middleware de autorización por roles
-- Variables de entorno para configuraciones sensibles
+- **GitHub**: [@BrianDevCo](https://github.com/BrianDevCo)
+- **Portfolio**: [Tu sitio web personal]
+- **LinkedIn**: [Tu perfil de LinkedIn]
 
-## 🤝 Contribución
-
-1. Fork el proyecto
-2. Crear una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abrir un Pull Request
-
-## 📝 Licencia
+## 📄 Licencia
 
 Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
 
-## 🆘 FAQ
+---
 
-### Preguntas Frecuentes
-
-**Q: ¿Cómo resetear la base de datos?**
-A: `docker-compose down -v && docker-compose up -d`
-
-**Q: ¿Cómo ver los logs?**
-A: `docker-compose logs -f [service-name]`
-
-**Q: ¿Cómo acceder a MongoDB directamente?**
-A: `docker-compose exec mongodb mongosh`
-
-**Q: ¿Cómo hacer backup de la base de datos?**
-A: `docker-compose exec mongodb mongodump --out /backup`
-
-## 📞 Soporte
-
-Para reportar bugs o solicitar nuevas características, por favor crear un issue en el repositorio.
+**Desarrollado con ❤️ por Brian Dev Co**
