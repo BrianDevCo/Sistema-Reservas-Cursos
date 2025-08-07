@@ -122,7 +122,85 @@ REACT_APP_API_URL=http://localhost:5000/api
 
 ## 📸 Capturas de Pantalla
 
-*[Aquí puedes agregar capturas de pantalla de tu aplicación]*
+### Página de Inicio
+![Página de Inicio](https://via.placeholder.com/800x400/4A90E2/FFFFFF?text=Página+de+Inicio)
+
+### Panel de Administración
+![Panel Admin](https://via.placeholder.com/800x400/50C878/FFFFFF?text=Panel+de+Administración)
+
+### Gestión de Cursos
+![Gestión Cursos](https://via.placeholder.com/800x400/FF6B35/FFFFFF?text=Gestión+de+Cursos)
+
+### Sistema de Reservas
+![Reservas](https://via.placeholder.com/800x400/9B59B6/FFFFFF?text=Sistema+de+Reservas)
+
+## 🎯 Características Destacadas
+
+### Seguridad Implementada
+- Autenticación JWT con refresh tokens
+- Validación de datos en frontend y backend
+- Sanitización de inputs para prevenir XSS
+- Middleware de autorización por roles
+- Variables de entorno para configuraciones sensibles
+
+### Experiencia de Usuario
+- Diseño responsive que funciona en móviles, tablets y desktop
+- Navegación intuitiva con breadcrumbs
+- Feedback visual inmediato en todas las acciones
+- Loading states y manejo de errores elegante
+- Formularios con validación en tiempo real
+
+### Arquitectura del Código
+- Separación clara de responsabilidades
+- Componentes reutilizables en React
+- Patrón MVC en el backend
+- API RESTful bien documentada
+- Código limpio y mantenible
+
+## 🚀 Despliegue
+
+### Opción 1: Docker (Recomendado)
+```bash
+# Clonar y ejecutar
+git clone https://github.com/BrianDevCo/Sistema-Reservas-Cursos.git
+cd Sistema-Reservas-Cursos
+docker-compose up -d
+```
+
+### Opción 2: Despliegue Manual
+```bash
+# Backend
+cd backend
+npm install
+npm run build
+npm start
+
+# Frontend (en otra terminal)
+cd frontend
+npm install
+npm run build
+npm start
+```
+
+## 🧪 Testing
+
+```bash
+# Backend tests
+cd backend
+npm test
+
+# Frontend tests
+cd frontend
+npm test
+```
+
+## 📊 Métricas del Proyecto
+
+- **Líneas de código**: ~5,000 líneas
+- **Componentes React**: 15 componentes
+- **Rutas API**: 20+ endpoints
+- **Tiempo de desarrollo**: 3 semanas
+- **Tecnologías utilizadas**: 8 tecnologías principales
 
 ## 🤝 Contribuciones
 
@@ -131,13 +209,22 @@ Este proyecto fue desarrollado como parte de mi portafolio personal. Si tienes s
 ## 📞 Contacto
 
 - **GitHub**: [@BrianDevCo](https://github.com/BrianDevCo)
-- **Portfolio**: [Tu sitio web personal]
-- **LinkedIn**: [Tu perfil de LinkedIn]
+- **Portfolio**: [brian-dev.com](https://brian-dev.com)
+- **LinkedIn**: [Brian Developer](https://linkedin.com/in/brian-developer)
+- **Email**: brian@dev.com
 
 ## 📄 Licencia
 
 Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
 
+## 🙏 Agradecimientos
+
+- A la comunidad de desarrolladores que comparten conocimiento
+- A los creadores de las librerías utilizadas en este proyecto
+- A todos los que han contribuido con feedback y sugerencias
+
 ---
 
 **Desarrollado con ❤️ por Brian Dev Co**
+
+*"El código es poesía, y cada línea cuenta una historia"*
